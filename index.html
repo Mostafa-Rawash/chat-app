@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doc ument</title>
+  </head>
+  <body>
+    <form action="">
+      <ul id="messages"></ul>
+      <input type="text" name="name" id="user" />
+      <input type="text" name="message" id="text" />
+      <button type="submit"></button>
+    </form>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"
+  ></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    $(() => {
+      var socket = io();
+      $("form").submit((e) => {
+        e.preventDefault();
+
+        socket.emit("chat message", $("#text").val(), $("#user").val());
+
+        $("#text").val("");
+      });
+      socket.on("chat message", (msg, name) => {
+        $("ul").append($("<li>").text(name + " : " + msg));
+      });
+    });
+  </script>
+</html>
