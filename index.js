@@ -1,17 +1,34 @@
-var app = require("express")();
+var express = require("express");
+const bodyParser = require("body-parser")
+const app = express();
+app.use(bodyParser.urlencoded({ extended: true }));
+
 var http = require('http').createServer(app);
 var io = require("socket.io")(http);
 var port = 3000;
 
+
+
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/index.html")
 })
+
+
+
+app.post("/users", (req, res) => {
+    res.sendFile(__dirname + "/chat.html")
+})
+
+
+
 io.on("connection", (socket) => {
     console.log("socket is workes");
-    socket.on("chat message", (msg, name) => {
-        console.log("hihihi  + " + name + " : " + msg);
-        io.emit('chat message', msg , name);
 
+    socket.on("inputmail", (name, email) => {
+        console.log(name + " : " + email);
+    })
+    socket.on("chat message", (msg) => {
+        console.log(msg);
     })
 })
 
