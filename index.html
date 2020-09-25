@@ -1,132 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
     <style>
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      form {
-        border: 3px solid #f1f1f1;
-      }
-
-      input[type="text"],
-      input[type="password"] {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
-      }
-
-      button {
-        background-color: #4caf50;
+      .f-white {
         color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        cursor: pointer;
-        width: 100%;
-      }
-
-      button:hover {
-        opacity: 0.8;
-      }
-
-      .cancelbtn {
-        width: auto;
-        padding: 10px 18px;
-        background-color: #f44336;
-      }
-
-      .imgcontainer {
-        text-align: center;
-        margin: 24px 0 12px 0;
-      }
-
-      img.avatar {
-        width: 40%;
-        border-radius: 50%;
-      }
-
-      .container {
-        padding: 16px;
-      }
-
-      span.psw {
-        float: right;
-        padding-top: 16px;
-      }
-
-      /* Change styles for span and cancel button on extra small screens */
-      @media screen and (max-width: 300px) {
-        span.psw {
-          display: block;
-          float: none;
-        }
-        .cancelbtn {
-          width: 100%;
-        }
       }
     </style>
   </head>
   <body>
-    <h2>Login Form</h2>
+    <div class="container my-5 py-5 z-depth-1 bg-dark f-white">
+      <!--Section: Content-->
+      <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-md-6">
+            <!-- Default form login -->
+            <form class="text-center" action="/users" method="post">
+              <p class="h4 mb-4 f-white">Sign in</p>
 
-    <form action="/users" method="post">
-      <div class="imgcontainer">
-        <img src="img_avatar2.png" alt="Avatar" class="avatar" />
-      </div>
+              <!-- Email -->
+              <input
+                type="email"
+                id="defaultLoginFormEmail"
+                class="form-control mb-4"
+                placeholder="E-mail"
+                name="mail"
+              />
 
-      <div class="container">
-        <label for="uname"><b>Username</b></label>
-        <input
-          type="text"
-          placeholder="Enter Username"
-          id="uname"
-          name="uname"
-          required
-        />
+              <!-- user name -->
+              <input
+                type="Name"
+                id="defaultLoginFormName"
+                class="form-control mb-4"
+                placeholder="Name"
+                name="name"
+              />
 
-        <label for="psw"><b>Password</b></label>
-        <input
-          type="password"
-          placeholder="Enter Password"
-          id="psw"
-          name="psw"
-          required
-        />
+              <div class="d-flex justify-content-around">
+                <div>
+                  <!-- Forgot password -->
+                  <a href="">Forgot password?</a>
+                </div>
+              </div>
 
-        <button type="submit">Login</button>
-        <label>
-          <input type="checkbox" checked="checked" name="remember" /> Remember
-          me
-        </label>
-      </div>
+              <!-- Sign in button -->
+              <button class="btn btn-info btn-block my-4" type="submit">
+                Sign in
+              </button>
 
-      <div class="container" style="background-color: #f1f1f1">
-        <button type="button" class="cancelbtn">Cancel</button>
-        <span class="psw">Forgot <a href="#">password?</a></span>
-      </div>
-    </form>
+              <!-- Register -->
+              <p>
+                Not a member?
+                <a href="">Register</a>
+              </p>
+
+              <!-- Social login -->
+              <p>or sign in with:</p>
+
+              <a href="#" class="mx-1" role="button"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="mx-1" role="button"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="mx-1" role="button"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="mx-1" role="button"
+                ><i class="fab fa-github"></i
+              ></a>
+            </form>
+            <!-- Default form login -->
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </section>
+      <!--Section: Content-->
+    </div>
   </body>
   <script
     src="https://code.jquery.com/jquery-3.5.1.js"
     integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"
   ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
+    integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf"
+    crossorigin="anonymous"
+  ></script>
   <script src="/socket.io/socket.io.js"></script>
   <script>
-    $(() => {
-      var socket = io();
-      $("form").submit((e) => {
-        socket.emit("inputmail", $("#uname").val(), $("#psw").val());
-
-        $("#uname").val("");
-
-        $("#psw").val("");
-      });
-     });
+    var socket = io();
   </script>
 </html>
