@@ -40,7 +40,7 @@
       e.preventDefault();
       socket.emit("hi", $("#msg").val());
     });
-    socket.on("hello", (msg) => {
+    socket.on("server message", (msg) => {
       $("ul").append($('<li>').text("the msg id : " + msg))
     })
 
