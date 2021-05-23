@@ -1,111 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"
-    />
-    <style>
-      .f-white {
-        color: white;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container my-5 py-5 z-depth-1 bg-dark f-white">
-      <!--Section: Content-->
-      <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
-        <!--Grid row-->
-        <div class="row d-flex justify-content-center">
-          <!--Grid column-->
-          <div class="col-md-6">
-            <!-- Default form login -->
-            <form class="text-center" action="/users" method="post">
-              <p class="h4 mb-4 f-white">Sign in</p>
 
-              <!-- Email -->
-              <input
-                type="email"
-                id="defaultLoginFormEmail"
-                class="form-control mb-4"
-                placeholder="E-mail"
-                name="mail"
-              />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <style>
+    .f-white {
+      color: white;
+    }
+  </style>
+</head>
 
-              <!-- user name -->
-              <input
-                type="Name"
-                id="defaultLoginFormName"
-                class="form-control mb-4"
-                placeholder="Name"
-                name="name"
-              />
+<body>
+  <div class="container my-5 py-5 z-depth-1 bg-dark f-white">
+    <!--Section: Content-->
+    <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
+      <!--Grid row-->
+      <div class="row d-flex justify-content-center">
+        <!--Grid column-->
+        <div class="col-md-6">
+          <!-- Default form login -->
+          <form class="text-center" action="/users" method="POST">
+            <p class="h4 mb-4 f-white">Sign in</p>
 
-              <div class="d-flex justify-content-around">
-                <div>
-                  <!-- Forgot password -->
-                  <a href="">Forgot password?</a>
-                </div>
+            <!-- Email -->
+            <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail" name="mail" />
+
+            <!-- user name -->
+            <input type="Name" id="defaultLoginFormName" class="form-control mb-4" placeholder="Name" name="name" />
+
+            <div class="d-flex justify-content-around">
+              <div>
+                <!-- Forgot password -->
+                <a href="">Forgot password?</a>
               </div>
+            </div>
 
-              <!-- Sign in button -->
-              <button class="btn btn-info btn-block my-4" type="submit">
-                Sign in
-              </button>
+            <!-- Sign in button -->
+            <button class="btn btn-info btn-block my-4" type="submit">
+              Sign in
+            </button>
 
-              <!-- Register -->
-              <p>
-                Not a member?
-                <a href="">Register</a>
-              </p>
+            <!-- Register -->
+            <p>
+              Not a member?
+              <a href="">Register</a>
+            </p>
 
-              <!-- Social login -->
-              <p>or sign in with:</p>
+            <!-- Social login -->
+            <p>or sign in with:</p>
 
-              <a href="#" class="mx-1" role="button"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a href="#" class="mx-1" role="button"
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a href="#" class="mx-1" role="button"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-              <a href="#" class="mx-1" role="button"
-                ><i class="fab fa-github"></i
-              ></a>
-            </form>
-            <!-- Default form login -->
-          </div>
-          <!--Grid column-->
+            <a href="#" class="mx-1" role="button"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="mx-1" role="button"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="mx-1" role="button"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="mx-1" role="button"><i class="fab fa-github"></i></a>
+          </form>
+          <!-- Default form login -->
         </div>
-        <!--Grid row-->
-      </section>
-      <!--Section: Content-->
-    </div>
-  </body>
-  <script
-    src="https://code.jquery.com/jquery-3.5.1.js"
-    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
-    integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf"
-    crossorigin="anonymous"
-  ></script>
-  <script src="/socket.io/socket.io.js"></script>
-  <script>
-    var socket = io();
-  </script>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </section>
+    <!--Section: Content-->
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+  integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
+  integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io();
+</script>
+
 </html>
